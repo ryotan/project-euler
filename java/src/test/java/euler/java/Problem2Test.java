@@ -23,6 +23,6 @@ public class Problem2Test {
     public void testFibEvenSum() throws Exception {
         assertThat("Fibonacci even summation below 10 is 10", testee.fibEvenSum(10), is(10L));
         assertThat("Fibonacci even summation below 35 is 19", testee.fibEvenSum(35), is(44L));
-        assertThat("Fibonacci even summation below 35 is 4000000", testee.fibEvenSum(4000000), is(4613732L));
+        assertThat("Fibonacci even summation below 4000000 is 4613732", testee.fibEvenSum(4000000), is(4613732L));
     }
 }
