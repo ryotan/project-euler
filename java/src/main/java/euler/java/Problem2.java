@@ -13,6 +13,9 @@ package euler.java;
  * @since 1.0
  */
 public class Problem2 {
+    public static void main(String... args) {
+        System.out.println(new Problem2().fibEvenSum(4000000));
+    }
 
     public long fibEvenSum(int max) {
         long before = 0L;
