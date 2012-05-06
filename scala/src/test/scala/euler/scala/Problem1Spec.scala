@@ -8,7 +8,6 @@ import org.specs2.mutable.Specification
  * @author Ryo TANAKA
  * @since 1.0
  */
-
 class Problem1Spec extends Specification {
   "Fizz buzz summation" should {
     " below 10 is 23" in {

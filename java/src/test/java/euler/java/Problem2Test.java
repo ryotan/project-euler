@@ -6,12 +6,19 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 /**
+ * Test class for {@link Problem2}.
+ *
  * @author Ryo TANAKA
  * @since 1.0
  */
 public class Problem2Test {
     private Problem2 testee = new Problem2();
 
+    /**
+     * Test for {@link Problem2#fibEvenSum(int)}.
+     *
+     * @throws Exception Unexpected exception.
+     */
     @Test
     public void testFibEvenSum() throws Exception {
         assertThat("Fibonacci even summation below 10 is 10", testee.fibEvenSum(10), is(10L));
