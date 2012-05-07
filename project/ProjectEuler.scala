@@ -7,20 +7,21 @@ object ProjectEuler extends Build {
     version := "1.0.0-SNAPSHOT"
   )
 
+  lazy val root = Project(
+    id = "project-euler",
+    base = file("."),
+    settings = defaultSettings
+  ) aggregate(java, scala)
+
   lazy val java = Project(
     id = "java",
     base = file("java"),
-    settings = defaultSettings ++ Seq(
-      name := "project-euler-java"
-    )
+    settings = defaultSettings
   )
 
   lazy val scala = Project(
     id = "scala",
     base = file("scala"),
-    settings = defaultSettings ++ Seq(
-      name := "project-euler-scala",
-      scalaVersion := "2.9.2"
-    )
+    settings = defaultSettings
   )
 }
