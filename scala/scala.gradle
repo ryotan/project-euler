@@ -1,0 +1,7 @@
+apply {
+    from script('scala')
+}
+
+dependencies {
+    testCompile libraries.specs2
+}

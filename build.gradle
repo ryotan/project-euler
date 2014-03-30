@@ -1,0 +1,23 @@
+apply {
+    from script('wrapper')
+}
+
+allprojects {
+    apply {
+        from script('libraries')
+    }
+
+    tasks.withType(GroovyCompile) { GroovyCompile task ->
+        [task.groovyOptions, task.options].each { opts ->
+            setEncoding(opts)
+        }
+    }
+}
+
+File script(String name) {
+    project.file("gradle/${name}.gradle")
+}
+
+void setEncoding(opts) {
+    opts.encoding = 'utf-8'
+}

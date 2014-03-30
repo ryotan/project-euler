@@ -1,0 +1,7 @@
+apply {
+    from script('java')
+}
+
+dependencies {
+    testCompile libraries.junit
+}

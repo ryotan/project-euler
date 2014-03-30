@@ -1,0 +1,18 @@
+apply {
+    from script('java')
+    from script('libraries')
+    plugin 'scala'
+}
+
+dependencies {
+    compile libraries.scala
+}
+
+compileScala {
+    scalaCompileOptions.useCompileDaemon = true
+}
+
+tasks.withType(ScalaCompile) { ScalaCompile task ->
+    scalaCompileOptions.useAnt = false
+    setEncoding(task.options)
+}

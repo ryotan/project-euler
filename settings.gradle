@@ -1,0 +1,11 @@
+rootProject.name = 'project-euler'
+
+[
+    'java',
+    'scala',
+].each { sub ->
+    include sub
+    project(":${sub}").with {
+        buildFileName = "${sub}.gradle"
+    }
+}
